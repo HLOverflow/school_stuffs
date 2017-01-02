@@ -7,3 +7,6 @@ extractWindowsWIFIpw.bat
 
 talkToMeWindows.ps1
     A way to access text-to-speech without 3rd parties software by using window's builtin powershell.
+
+newyearScript.py
+    Double click and there will be a dancing "Happy New Year" on the cmd console.
