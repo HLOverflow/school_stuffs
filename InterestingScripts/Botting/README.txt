@@ -1,4 +1,4 @@
-mousehunt.au
+mousehunt.au3
     An autoit file that does botting.
     1.push the facebook mousehunt window to foreground while saving your last screen.
     2.mouse click
