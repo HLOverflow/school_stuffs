@@ -4,3 +4,6 @@ batteryManager.py
 extractWindowsWIFIpw.bat
     The computer keep tracks of WIFI credentials of visited WIFIs. 
     This script will extract those confidential data and output to a file, wifipw.txt.
+
+talkToMeWindows.ps1
+    A way to access text-to-speech without 3rd parties software by using window's builtin powershell.
