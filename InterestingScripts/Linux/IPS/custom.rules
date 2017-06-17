@@ -1,6 +1,6 @@
 #alert icmp any any -> $HOME_NET any (msg:"ICMP test"; sid:1000001; rev:1; classtype:icmp-event;)
 
-alert tcp $HOME_NET any -> any any (msg:"Trap services triggered"; content:"|08 08 09|";rawbytes; sid:1000003; rev:1;)
+#alert tcp $HOME_NET any -> any any (msg:"Trap services triggered"; content:"|08 08 09|";rawbytes; sid:1000003; rev:1;)
 
 alert tcp any any -> $HOME_NET any (msg:”Possible Port Scan”; detection_filter:track by_src, count 50, seconds 60; sid:1000005; rev:1;)
 
