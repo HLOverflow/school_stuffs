@@ -51,6 +51,9 @@
     so that when restarting the script, this script will read in fresh alerts instead of old snort alerts.
     
     Using `tag.upper() in line.upper()` allow case insensitivity of tags.
+    
+    ![proof](proof.png)
+    
 ---
 An earlier strategy that I had was to set up various fake services. 
 These fake services will be labeled as open by nmap, tricking a curious hacker to visit them. Note: When crafting a good nmap command, the hacker may be able to bypass our "Possible Port Scan" rule.
