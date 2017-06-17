@@ -34,6 +34,7 @@
     The alerts will be sent to `~/snortlog/alert` in ascii form.
 
 5. Run IPS python script
+    
     `./pythonIPS.py 192.168.1.2 2 ~/snortlog/alert`
     > arg1: own ip
     arg2: interval in seconds
