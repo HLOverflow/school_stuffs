@@ -1,4 +1,4 @@
-# Intrusion Prevention System 
+# Easy Intrusion Prevention System 
 1. Install snort 
     For debian linux:
     ```sh
