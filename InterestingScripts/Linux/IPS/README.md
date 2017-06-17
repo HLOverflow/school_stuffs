@@ -21,7 +21,7 @@
     
 3. Snort rule (custom.rules)
     > alert tcp any any -> $HOME_NET $UNWANTED_PORT (msg: "Bad Traffic Unwanted port"; sid:1000007; rev:1;)
-    alert tcp any any -> $HOME_NET any (msg:”Possible Port Scan”; detection_filter:track by_src, count 50, seconds 60; sid:1000005; rev:1;)
+    > alert tcp any any -> $HOME_NET any (msg:”Possible Port Scan”; detection_filter:track by_src, count 50, seconds 60; sid:1000005; rev:1;)
 
     Copy and paste these rules into `/etc/snort/rules/local.rules`
     
@@ -36,8 +36,8 @@
 5. Run IPS python script
     `./pythonIPS.py 192.168.1.2 2 ~/snortlog/alert`
     > arg1: own ip
-    arg2: interval in seconds
-    arg3: location of the alert file
+    > arg2: interval in seconds
+    > arg3: location of the alert file
 
     This script will try to match the alert with TAGS specified. When matched, it will ban the ip address by adding the IP address into the iptables INPUT chain.
 
