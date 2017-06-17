@@ -42,11 +42,10 @@
 
     This script will try to match the alert with TAGS specified. When matched, it will ban the ip address by adding the IP address into the iptables INPUT chain.
 
-    ##### Improvement:
+    ### Improvement:
      The script will read through the alert file every n seconds instead of reading infinitely in a while loop. It will continue reading where it left off previous unless the script was killed abruptly such as using the linux `kill <pid>` command.
     
     Aborting using Ctrl + C will flush the current `alert` to `alert.bak`
     so that when restarting the script, this script will read in fresh alerts instead of old snort alerts.
     
     Using `tag.upper() in line.upper()` allow case insensitivity of tags.
----
