@@ -36,3 +36,5 @@ This is a script to be used in Kali linux where the tools are already preinstall
 **This is just for education purpose, hence the obvious file naming without much trickery.**
 
  [dill]: <https://github.com/joemccann/dillinger>
+ [markdown-it]: <https://github.com/markdown-it/markdown-it>
+ [Ace Editor]: <http://ace.ajax.org>
