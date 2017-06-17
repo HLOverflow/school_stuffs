@@ -34,7 +34,3 @@ This is a script to be used in Kali linux where the tools are already preinstall
     Now that the meterpreter is listening, we will need to trick the victim to download and run this malicious `evil.exe`
 
 **This is just for education purpose, hence the obvious file naming without much trickery.**
-
- [dill]: <https://github.com/joemccann/dillinger>
- [markdown-it]: <https://github.com/markdown-it/markdown-it>
- [Ace Editor]: <http://ace.ajax.org>
