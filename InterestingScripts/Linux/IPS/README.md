@@ -34,7 +34,6 @@
     The alerts will be sent to `~/snortlog/alert` in ascii form.
 
 5. Run IPS python script
-    
     `./pythonIPS.py 192.168.1.2 2 ~/snortlog/alert`
     > arg1: own ip
     arg2: interval in seconds
@@ -42,10 +41,31 @@
 
     This script will try to match the alert with TAGS specified. When matched, it will ban the ip address by adding the IP address into the iptables INPUT chain.
 
-    ### Improvement:
+    ##### Improvement:
      The script will read through the alert file every n seconds instead of reading infinitely in a while loop. It will continue reading where it left off previous unless the script was killed abruptly such as using the linux `kill <pid>` command.
     
     Aborting using Ctrl + C will flush the current `alert` to `alert.bak`
     so that when restarting the script, this script will read in fresh alerts instead of old snort alerts.
     
     Using `tag.upper() in line.upper()` allow case insensitivity of tags.
+---
+An earlier strategy that I had was to set up various fake services. 
+These fake services will be labeled as open by nmap, tricking a curious hacker to visit them. Note: When crafting a good nmap command, the hacker may be able to bypass our "Possible Port Scan" rule.
+
+When connected, it will reply connection refuse with secret white spaces behind.
+These secret white spaces `"\x08\x08\x09"` will trigger my following snort rule.
+> alert tcp $HOME_NET any -> any any (msg:"Trap services triggered"; content:"|07 08 09|";rawbytes; sid:1000003; rev:1;)
+
+My python script sees this alert and ban their ip address.
+
+simply run:
+`nc -nvlp 22 -c "./trig.py 192.168.1.2 22 ssh"`
+
+What you should see:
+```
+root@kali: ~ # nc 192.168.1.2 22
+(UNKNOWN) [192.168.1.2] 22 (ssh) : Connection refuse
+```
+This looks like a normal response when connected to a closed port.
+Yet, this trap service will activate our IPS to ban them! Sounds interesting? 
+My further research brought to me the `UNWANTED_PORT` idea that works even better than the "Trap services triggered" rule.
