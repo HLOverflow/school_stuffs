@@ -5,6 +5,7 @@ Here contains what I learnt from school, my CCA and on my free time.
 ![offsec][club]
 
 As a core member of Ntu-Cec Offensive Cyber Security Club (ntu-offsec), 
+
 I had hosted a few workshops for our club activities.
 
 These are the links to the slides:
