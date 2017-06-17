@@ -53,7 +53,8 @@
     Using `tag.upper() in line.upper()` allow case insensitivity of tags.
     
     ![proof](proof.png)
-    
+This screenshot shows that the attacker (192.168.64.128) tried to port scan target (192.168.64.130) with a default nmap command. The IPS script successfully banned the ip. When the attacker tries to port scan the target again, all ports are filtered(no response).
+
 ---
 An earlier strategy that I had was to set up various fake services. 
 These fake services will be labeled as open by nmap, tricking a curious hacker to visit them. Note: When crafting a good nmap command, the hacker may be able to bypass our "Possible Port Scan" rule.
