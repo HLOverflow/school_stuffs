@@ -22,7 +22,7 @@ import sys
 DEBUG=False
 
 #What situations to add the source ip to iptables
-tags = ["Bad Traffic", "backdoor" ,"TCP Port Scanning", "Trap services triggered"]
+tags = ["Bad Traffic", "backdoor" ,"Possible Port Scan", "Trap services triggered"]
 alertTag = "TOPSECRET"
 
 #PATHS
