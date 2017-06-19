@@ -1,7 +1,7 @@
 ################################
 # Author: Tay Hui Lian
 # Description:
-# this program will compute hashes with the 4 common hashes you see online for file integrity
+# this program will compute hashes with the 3 common hashes you see online for file integrity
 #
 # more hashes can be added by modifying "select hash type section"
 # refer to hashlib regarding available hashes
