@@ -28,11 +28,6 @@ root.withdraw()
 filepath = tkFileDialog.askopenfilename()
 root.destroy()
 
-# extract data
-fo = open(filepath, "rb")
-data = fo.read()
-fo.close()
-
 # select hash type
 print '''
 Available hash options
@@ -60,6 +55,11 @@ elif (opt == 4):
 else:
     print "invalid option"
     exit(0)
+
+# extract data
+fo = open(filepath, "rb")
+data = fo.read()
+fo.close()
 
 m.update(data)
 h = m.hexdigest()
