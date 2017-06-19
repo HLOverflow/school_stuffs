@@ -8,4 +8,4 @@ This is the section where I coded scripts that can be used every other day
 
 
 
-[shredR](result_shredder.JPG)
+![shredR](result_shredder.JPG)
