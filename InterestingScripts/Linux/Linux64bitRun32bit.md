@@ -1,3 +1,4 @@
+# How to run/compile 32 bit programs on 64 bit linux debian
 
 ### Installations
 These are the commands I used:
