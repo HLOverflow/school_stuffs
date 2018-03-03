@@ -1,4 +1,6 @@
 # Cheatsheet
+I personally like to use GDB. When I try r2, I got shocked by how I was unable to map old GDB commands to be used in r2.
+My favourite commands are mapped to r2 in this way especially the debugging part. 
 
 dynamic analysis with `-d`
 static analysis without `-d`
@@ -18,7 +20,7 @@ static analysis without `-d`
 ## Useful static analysis
 |command|description|
 |----|---|
-|`VV`| Graph
+|`VV`| Graph|
 |`px` / `pxw` / `pxq` | hexdump|
 
 ## Useful debugging (dynamic)
@@ -32,6 +34,7 @@ run above before going into Visual Debug mode (V -> p -> p).
     Visual Debug mode will show registers + disass + highlightings
 
 Command Mode with `:`
+
 |command|description|
 |----|---|
 |`ds`| step|
@@ -43,14 +46,20 @@ Back to visual mode with [Enter]
 
 ## View registers and data at addresses
 
+### View data
 Similar to GDB's examine `x/s` or `x/d` or `x/x`
+
 |command|description|
 |----|---|
 |`ps @ addr/reg/reg+offset`| print string at the address |
 |`pfi @ addr/reg/reg+offset`| print integer at the address |
 |`pfx @ addr/reg/reg+offset`| print hex at the address |
 
-View Registers
+
+### View Registers
+
 |command|description|
 |----|---|
-| `dr` | see all register (similar to GDB's `info re
+| `dr` | see all register (similar to GDB's `info reg`) |
+| `dr=` | see registers in more compact form |
+| `dr eax` | see value of register in hex |
