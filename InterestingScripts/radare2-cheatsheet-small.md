@@ -1,46 +1,56 @@
-debugger mode (-d)
-without -d is static analysis
+# Cheatsheet
 
-======================
-aaa	          //analyse
+dynamic analysis with `-d`
+static analysis without `-d`
 
-s sym.main		//seek
-pdf			//disassemble
+## Must run command
+|command|description|
+|----|---|
+|`aaa`|analyse all
+|`s sym.main`| seek main function
+|`pdf`| disassemble
 
-sym.imp.printf	 //means imported function printf
+## Some r2 Representations
+`sym.main`              => local function
+`sym.imp.printf`        => imported function
+`local_4h`              => same as `rbp-0x4`
 
-=========================
-//useful debugging commands
+## Useful static analysis
+|command|description|
+|----|---|
+|`VV`| Graph
+|`px` / `pxw` / `pxq` | hexdump|
 
-db sym.main       //break main
-dc                //continue
+## Useful debugging (dynamic)
 
-//do the above before going into Visual mode
+|command|description|
+|----|---|
+|`db main`| break main|
+|`dc`| continue |
+run above before going into Visual Debug mode (V -> p -> p).
 
-ds		  //step
-dso		  //step over
+    Visual Debug mode will show registers + disass + highlightings
 
-pfi @ rbp-0x4	  //print integer of local variable a $rbp-0x4
-pfx @ rbp-0x4	  //print hex ...
-ps @ rbp-0x4	  //print string
-ps @ 0x004006d3   //print string at this addr
+Command Mode with `:`
+|command|description|
+|----|---|
+|`ds`| step|
+|`dso`| step over|
 
-px @ address	   //hexdump
-pxw @ address		//word hexdump
-pxq @ address		//quad hexdump
+Back to visual mode with [Enter]
+`s` to step
+[shift] + r  to randomize colors (easier to see)
 
-=======================
-//Visual modes
+## View registers and data at addresses
 
-V		  //visual mode
-p		  //cycle different visual mode
+Similar to GDB's examine `x/s` or `x/d` or `x/x`
+|command|description|
+|----|---|
+|`ps @ addr/reg/reg+offset`| print string at the address |
+|`pfi @ addr/reg/reg+offset`| print integer at the address |
+|`pfx @ addr/reg/reg+offset`| print hex at the address |
 
-V -> p -> p     //good for debugging (got register, disassembly)
-s                    //step, will highlight current address
-:		//enter command
-[enter]		//back to visual
-
-shift + r	  //visual mode random color
-
-====================
-VV		  //visual graph
+View Registers
+|command|description|
+|----|---|
+| `dr` | see all register (similar to GDB's `info re
