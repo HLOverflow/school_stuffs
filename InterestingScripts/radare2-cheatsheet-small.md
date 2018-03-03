@@ -29,6 +29,7 @@ static analysis without `-d`
 |----|---|
 |`db main`| break main|
 |`dc`| continue |
+
 run above before going into Visual Debug mode (V -> p -> p).
 
     Visual Debug mode will show registers + disass + highlightings
@@ -41,6 +42,7 @@ Command Mode with `:`
 |`dso`| step over|
 
 Back to visual mode with [Enter]
+
 `s` to step
 [shift] + r  to randomize colors (easier to see)
 
