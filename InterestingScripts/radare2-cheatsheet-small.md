@@ -13,9 +13,10 @@ static analysis without `-d`
 |`pdf`| disassemble
 
 ## Some r2 Representations
-`sym.main`              => local function
-`sym.imp.printf`        => imported function
-`local_4h`              => same as `rbp-0x4`
+
+- `sym.main`              => local function
+- `sym.imp.printf`        => imported function
+- `local_4h`              => same as `rbp-0x4`
 
 ## Useful static analysis
 |command|description|
