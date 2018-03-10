@@ -23,6 +23,7 @@ static analysis without `-d`
 |----|---|
 |`VV`| Graph|
 |`px` / `pxw` / `pxq` | hexdump|
+|`/ <string>`|search a string in the entire binary|
 
 ## Useful debugging (dynamic)
 
