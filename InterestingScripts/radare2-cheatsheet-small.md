@@ -67,3 +67,13 @@ Similar to GDB's examine `x/s` or `x/d` or `x/x`
 | `dr` | see all register (similar to GDB's `info reg`) |
 | `dr=` | see registers in more compact form |
 | `dr eax` | see value of register in hex |
+
+## String patching
+
+|command|description|
+|----|---|
+|`s <address>`|seek the addr|
+|`oo+`|open in read-write mode|
+|`w <string>`|overwrite location with string|
+
+
