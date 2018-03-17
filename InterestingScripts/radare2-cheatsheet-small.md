@@ -30,7 +30,7 @@ static analysis without `-d`
 
 |command|description|
 |----|---|
-|`ood` <arg1> <arg2> ...| set args like in gdb |
+|`ood <arg1> <arg2> ...`| set args like in gdb |
 |`db main`| break main|
 |`dc`| continue |
 
