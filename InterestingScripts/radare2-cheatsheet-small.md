@@ -27,8 +27,10 @@ static analysis without `-d`
 
 ## Useful debugging (dynamic)
 
+
 |command|description|
 |----|---|
+|`ood` <arg1> <arg2> ...| set args like in gdb |
 |`db main`| break main|
 |`dc`| continue |
 
@@ -41,7 +43,8 @@ Command Mode with `:`
 |command|description|
 |----|---|
 |`ds`| step|
-|`dso`| step over|
+|`dso`| step over without entering a function |
+|`dsf`| step until end of frame (used accidentally enters a function but want to skip)|
 
 Back to visual mode with [Enter]
 
