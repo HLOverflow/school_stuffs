@@ -5,7 +5,7 @@ These are the commands I used:
 ```sh
 sudo dpkg --add-architecture i386
 sudo apt-get update
-sudo apt-get install lib32z1 lib32ncurses5 libselinux1:i386 g++-multilib libc6-dev-i386
+sudo apt-get install lib32z1 libselinux1:i386 g++-multilib libc6-dev-i386
 ```
 ### Testing it
 
