@@ -1,4 +1,4 @@
-## How to install pulse secure on mint
+## How to install pulse secure on mint 18
 (new NTU vpn)
 
 I have googled online and kept seeing that the newer version of mints are not supported... Hence, I try my best to fix it and this is how I did it.
