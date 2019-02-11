@@ -79,4 +79,9 @@ Similar to GDB's examine `x/s` or `x/d` or `x/x`
 |`oo+`|open in read-write mode|
 |`w <string>`|overwrite location with string|
 
+### Find ROP gadgets
+
+`/R [filter]`
+Very useful.
+
 
